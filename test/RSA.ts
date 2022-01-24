@@ -10,7 +10,18 @@ describe('provant de generar un parell de claus RSA amb generateRSAKeys()', func
         // Mirame que sea igual a: El desencriptado del encriptado de un BigInt de valor 2
         // usando las claves RSA generadas y guardadas en la variable val
 
-        chai.expect(BigInt(2)).to.equal(val.decrypt(val.getRSAPublicKey().encrypt(BigInt(2))))
+        const mensajePlain = BigInt(2)
+        console.log(`mensaje plano: ${mensajePlain}`)
+
+        const mensajeCifrado = val.getRSAPublicKey().encrypt(mensajePlain)
+        console.log(`mensaje cifrado: ${mensajeCifrado}`)
+
+        const mensajeDescifrado = val.decrypt(mensajeCifrado)
+        console.log(`mensaje descifrado: ${mensajeDescifrado}`)
+
+        chai.expect(mensajePlain).to.equal(mensajeDescifrado)
+
+        // chai.expect(BigInt(2)).to.equal(val.decrypt(val.getRSAPublicKey().encrypt(BigInt(2))))
       })
     })
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@big3/ciber-modules",
+  "name": "@cyber/ciber-modules",
   "version": "0.0.1",
   "description": "Modules for Ciber Applications",
   "keywords": [
@@ -10,10 +10,10 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Albert Sáez Núñez",
-    "email": "asaez@icc.ub.edu"
+    "name": "",
+    "email": ""
   },
-  "repository": "github:Big-3/Moduls-Ciber",
+  "repository": "github:....",
   "types": "./types/index.d.ts",
   "main": "./dist/cjs/index.node.cjs",
   "browser": "./dist/esm/index.browser.js",

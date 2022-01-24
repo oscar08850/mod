@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[RSA.ts:6](https://github.com/Big-3/Moduls-Ciber/blob/f68201c/src/ts/RSA.ts#L6)
+[RSA.ts:6](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L6)
 
 ## Methods
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[RSA.ts:19](https://github.com/Big-3/Moduls-Ciber/blob/f68201c/src/ts/RSA.ts#L19)
+[RSA.ts:19](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L19)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[RSA.ts:11](https://github.com/Big-3/Moduls-Ciber/blob/f68201c/src/ts/RSA.ts#L11)
+[RSA.ts:11](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L11)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[RSA.ts:15](https://github.com/Big-3/Moduls-Ciber/blob/f68201c/src/ts/RSA.ts#L15)
+[RSA.ts:15](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L15)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[RSA.ts:23](https://github.com/Big-3/Moduls-Ciber/blob/f68201c/src/ts/RSA.ts#L23)
+[RSA.ts:23](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L23)
