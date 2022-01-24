@@ -23,7 +23,22 @@ export class RSAPublicKey {
   public verify (s: bigint): bigint {
     return bcu.modPow(s, this.e, this.n) // obtenim h (hash encriptat) s^e (mod n)
   }
+
+  public blind (r: bigint, m: bigint): bigint {
+    const n: bigint = this.getModN()
+    const aux = m * (r ** this.e)
+    const menBlind = bcu.modPow(aux, 1, n)
+    return menBlind
+  }
+
+  public unblind (r: bigint, sigmaP: bigint): bigint {
+    const n: bigint = this.getModN()
+    const aux = sigmaP * (r ** -1n)
+    const firma = bcu.modPow(aux, 1, n)
+    return firma
+  }
 }
+
 export class RSAPrivateKey {
   private readonly d: bigint
   private readonly pubKey: RSAPublicKey
@@ -50,7 +65,7 @@ export class RSAPrivateKey {
   }
 }
 
-async function genPrime (nbits: number): Promise<bigint> {
+export async function genPrime (nbits: number): Promise<bigint> {
   let n: bigint = BigInt(10)
   while (!await bcu.isProbablyPrime(n)) {
     n = await bcu.prime(nbits)
@@ -74,11 +89,11 @@ function genE (mcm: bigint, nbits: number): bigint {
 }
 
 export async function generateRSAKeys (nbits = 2048): Promise<RSAPrivateKey> {
-  // Qualsevol 2 nombres primers
+  // 2 Numeros primos
   const p: bigint = await genPrime(nbits)
   const q: bigint = await genPrime(nbits)
 
-  // Calculem el mòdul
+  // Calculem n y phi(n)
   const n: bigint = p * q
   const phiN: bigint = BigInt((p - BigInt(1)) * (q - BigInt(1)))
 

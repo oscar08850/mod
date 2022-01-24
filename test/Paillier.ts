@@ -23,13 +23,6 @@ describe('Provant de crear un crypto-sistema Paillier', function () {
         }
         chai.expect(9n).to.equal(keys.decrypt(keys.getPubKey().add(cs)))
       })
-
-      // Este no se para que es, entiendo lo que hace pero no se para que lo hace.
-      it('Hauria de ser capaç de multiplicar un m a un c', function () {
-        const m = 2n
-        const c = keys.getPubKey().encrypt(3n)
-        chai.expect(6n).to.equal(keys.decrypt(keys.getPubKey().multiply(c, m)))
-      })
     })
   }
 })

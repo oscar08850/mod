@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[RSA.ts:31](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L31)
+[RSA.ts:46](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L46)
 
 ## Methods
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[RSA.ts:44](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L44)
+[RSA.ts:59](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L59)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[RSA.ts:36](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L36)
+[RSA.ts:51](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L51)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[RSA.ts:40](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L40)
+[RSA.ts:55](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L55)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[RSA.ts:48](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L48)
+[RSA.ts:63](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L63)

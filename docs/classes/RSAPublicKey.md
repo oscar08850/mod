@@ -8,9 +8,11 @@
 
 ### Methods
 
+- [blind](RSAPublicKey.md#blind)
 - [encrypt](RSAPublicKey.md#encrypt)
 - [getExpE](RSAPublicKey.md#getexpe)
 - [getModN](RSAPublicKey.md#getmodn)
+- [unblind](RSAPublicKey.md#unblind)
 - [verify](RSAPublicKey.md#verify)
 
 ## Constructors
@@ -28,9 +30,30 @@
 
 #### Defined in
 
-[RSA.ts:6](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L6)
+[RSA.ts:6](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L6)
 
 ## Methods
+
+### blind
+
+▸ **blind**(`r`, `m`): `bigint`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `r` | `bigint` |
+| `m` | `bigint` |
+
+#### Returns
+
+`bigint`
+
+#### Defined in
+
+[RSA.ts:27](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L27)
+
+___
 
 ### encrypt
 
@@ -48,7 +71,7 @@
 
 #### Defined in
 
-[RSA.ts:19](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L19)
+[RSA.ts:19](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L19)
 
 ___
 
@@ -62,7 +85,7 @@ ___
 
 #### Defined in
 
-[RSA.ts:11](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L11)
+[RSA.ts:11](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L11)
 
 ___
 
@@ -76,7 +99,28 @@ ___
 
 #### Defined in
 
-[RSA.ts:15](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L15)
+[RSA.ts:15](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L15)
+
+___
+
+### unblind
+
+▸ **unblind**(`r`, `sigmaP`): `bigint`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `r` | `bigint` |
+| `sigmaP` | `bigint` |
+
+#### Returns
+
+`bigint`
+
+#### Defined in
+
+[RSA.ts:34](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L34)
 
 ___
 
@@ -96,4 +140,4 @@ ___
 
 #### Defined in
 
-[RSA.ts:23](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L23)
+[RSA.ts:23](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L23)

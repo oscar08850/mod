@@ -53,17 +53,23 @@ function getRandomInt (min: number, max: number): number {
 }
 
 export async function genSharedKeys (s: bigint, t: number, n: number, nbits: number): Promise<SharedKey[]> {
-  const order: number = t - 1
+  // s Shared key
+
+  // Λ  Position of the fragment
+  // t  Threshold
+  // p  Module
+
+  const order: number = t - 1 // se necesitan 3 de los 5 para desbloquear
   const coeff: number[] = []
   let i: number = 0
   let j: number = 0
   const SharedKeys: SharedKey[] = []
-  let y: bigint = s
+  let y: bigint = s // y es el secreto
 
   // Determinació arbitrària dels mòdul p
   const p: bigint = await genPrime(nbits)
 
-  // Determinació arbitrària dels n=ordre coeficients
+  // Determinació arbitrària dels n = ordre coeficients
   while (i < order) {
     coeff[i] = getRandomInt(1, 1000)
     i++
@@ -73,15 +79,17 @@ export async function genSharedKeys (s: bigint, t: number, n: number, nbits: num
 
   while (i < n) {
     // Funció F(X)=F(i+1)
-    y = s
+    y = s // y es el secreto
 
     while (j < order) {
       y = y + BigInt(coeff[j] * ((i + 1) ** (j + 1)))
+      // S + 258*1^1
+      // S + 258*1^1 + 154*1^2  + 458*1^3
       j++
     }
-    y = bcu.modPow(y, 1, p)
+    y = bcu.modPow(y, 1, p) // y^1 (mod p)
     SharedKeys[i] = new SharedKey(y, i + 1, t, p)
-    i++
+    i++ // Creamos las s1, s2, s3 ,s4, s5 (Solo necesitamos 3 para descifrarlo)
     j = 0
   }
   return SharedKeys

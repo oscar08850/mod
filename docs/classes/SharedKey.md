@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[Secret-sharing.ts:11](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L11)
+[Secret-sharing.ts:11](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L11)
 
 ## Methods
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[Secret-sharing.ts:30](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L30)
+[Secret-sharing.ts:30](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L30)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[Secret-sharing.ts:22](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L22)
+[Secret-sharing.ts:22](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L22)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[Secret-sharing.ts:18](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L18)
+[Secret-sharing.ts:18](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L18)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[Secret-sharing.ts:26](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L26)
+[Secret-sharing.ts:26](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L26)

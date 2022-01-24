@@ -40,7 +40,7 @@ This module runs perfectly in node.js and browsers
 
 #### Defined in
 
-[Secret-sharing.ts:90](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L90)
+[Secret-sharing.ts:98](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L98)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[Secret-sharing.ts:55](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Secret-sharing.ts#L55)
+[Secret-sharing.ts:55](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Secret-sharing.ts#L55)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[Paillier.ts:99](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/Paillier.ts#L99)
+[Paillier.ts:99](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/Paillier.ts#L99)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 #### Defined in
 
-[RSA.ts:76](https://github.com/oscar08850/mod/blob/3be4b2e/src/ts/RSA.ts#L76)
+[RSA.ts:91](https://github.com/oscar08850/mod/blob/f6a1753/src/ts/RSA.ts#L91)

@@ -6,6 +6,8 @@ export declare class RSAPublicKey {
     getModN(): bigint;
     encrypt(m: bigint): bigint;
     verify(s: bigint): bigint;
+    blind(r: bigint, m: bigint): bigint;
+    unblind(r: bigint, sigmaP: bigint): bigint;
 }
 export declare class RSAPrivateKey {
     private readonly d;
@@ -16,5 +18,6 @@ export declare class RSAPrivateKey {
     decrypt(c: bigint): bigint;
     sign(h: bigint): bigint;
 }
+export declare function genPrime(nbits: number): Promise<bigint>;
 export declare function generateRSAKeys(nbits?: number): Promise<RSAPrivateKey>;
 //# sourceMappingURL=RSA.d.ts.map
