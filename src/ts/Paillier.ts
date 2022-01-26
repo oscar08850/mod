@@ -71,8 +71,8 @@ export class PaillierPrivateKey {
   }
 }
 
-// ===========================================
-// ================ FUNCTIONS ================
+// =========================================== //
+// ================ FUNCTIONS ================ //
 
 async function getPrime (nbits: number): Promise<bigint> {
   let n: bigint = 10n
@@ -83,29 +83,23 @@ async function getPrime (nbits: number): Promise<bigint> {
   return n
 }
 
-/*
-function isCoprime (a: bigint, b: bigint): boolean {
-  const exp: bigint = 1n
-  return bcu.gcd(a, b) === exp
-}
-*/
-
-function L (x: bigint, n: bigint): bigint {
+// L(u) = (u-1)/n
+function L (u: bigint, n: bigint): bigint {
   let mu: bigint = 1n
-  mu = (x - 1n) / n
+  mu = (u - 1n) / n
   return mu
 }
 
 export async function generatePaillierKeys (nbits: number = 2048): Promise<PaillierPrivateKey> {
-  // Get Primes
+  // Generamos los primos p , q
   const q: bigint = await getPrime(Math.floor(nbits / 2) + 1)
   const p: bigint = await getPrime(Math.floor(nbits) / 2)
 
-  // Set modular space
+  // creamos las variables de los modulos n y n^2
   const n: bigint = q * p
   const n2: bigint = n ** 2n
 
-  // Set lambda
+  // Set lambda  ==> λ = lcm(p-1,q-1)
   const lambda: bigint = bcu.lcm(p - 1n, q - 1n)
 
   const g: bigint = bcu.randBetween(n2, 1n)

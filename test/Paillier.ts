@@ -3,7 +3,7 @@ describe('Provant de crear un crypto-sistema Paillier', function () {
   for (const bits of keyBits) {
     describe(`Crypto-Sistema de ${bits} bits.`, function () {
       let keys: _pkg.PaillierPrivateKey
-      this.timeout(10000)
+      this.timeout(100000)
       it(`Creamos un sistema de Paillier de ${bits} bits,`, async function () {
         keys = await _pkg.generatePaillierKeys(bits)
         chai.expect(keys).to.be.an.instanceOf(_pkg.PaillierPrivateKey)
@@ -15,13 +15,13 @@ describe('Provant de crear un crypto-sistema Paillier', function () {
         chai.expect(2n).to.equal(m)
       })
       it('Sumamos los BigInt de un vector de BigInts y comprobamos que el resultado es el esperado', function () {
-        const ms: Array<bigint> = [2n, 3n, 4n] // 2 + 3 + 4 = 9
+        const ms: Array<bigint> = [1000n, 1n, 1000n] // 1000 + 1 + 1000 = 000 002 001
         const cs: Array<bigint> = []
         for (const m of ms) {
           // metemos los valores encriptados uno a uno en el vector cs (votos)
           cs.push(keys.getPubKey().encrypt(m))
         }
-        chai.expect(9n).to.equal(keys.decrypt(keys.getPubKey().add(cs)))
+        chai.expect(2001n).to.equal(keys.decrypt(keys.getPubKey().add(cs)))
       })
     })
   }

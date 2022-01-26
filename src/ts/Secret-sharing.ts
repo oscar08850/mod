@@ -69,7 +69,7 @@ export async function genSharedKeys (s: bigint, t: number, n: number, nbits: num
   // Determinació arbitrària dels mòdul p
   const p: bigint = await genPrime(nbits)
 
-  // Determinació arbitrària dels n = ordre coeficients
+  // Calculo aleatorio de los coeficientes
   while (i < order) {
     coeff[i] = getRandomInt(1, 1000)
     i++
@@ -100,7 +100,7 @@ export function LagrangeInterpolation (receivedSharedKeys: SharedKey[]): bigint 
   let result: bigint = 0n
   const t: number = receivedSharedKeys[0].getThreshold()
 
-  let product: bigint = BigInt(1)
+  let product: bigint = 1n
   let j: number = 0
 
   const p: bigint = receivedSharedKeys[0].getModP()
@@ -112,20 +112,19 @@ export function LagrangeInterpolation (receivedSharedKeys: SharedKey[]): bigint 
   while (i < t) {
     j = 0
 
-    // Productori de Λ
+    // Productorio de Λ
     while (j < t) {
       if (receivedSharedKeys[i].getPositionΛ() !== receivedSharedKeys[j].getPositionΛ()) {
         numerator = receivedSharedKeys[j].getPositionΛ().valueOf()
         denominator = receivedSharedKeys[j].getPositionΛ().valueOf() - receivedSharedKeys[i].getPositionΛ().valueOf()
 
-        // Fer el mòdul invers és indispensable perquè no es pot convertir un número decimal a bigint. Per aquest motiu cal separar el numerador del denominador
         product = bcu.modInv(BigInt(denominator), p) * BigInt(numerator) * product
       }
       j++
     }
 
     result = result + receivedSharedKeys[i].getSharedKeyS().valueOf() * product
-    product = BigInt(1)
+    product = 1n
     i++
   }
 

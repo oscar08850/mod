@@ -5,16 +5,13 @@ describe('Provant de generar claus compartides a partir del secret', function ()
   for (const nbits of inputs) {
     // A genera un secreto como un numero, A reparte N partes del secreto y lo borra, se juntan p partes y se recupera el secreto
     describe(`genSharedKeys(3,5,11,${nbits})`, function () {
-      it('Hauria de demostrar que a partir del secret es creen les claus compartides i amb aquestes es pot recuperar el secret', async function () {
-        this.timeout(10000)
+      it('A partir de un secreto, recuperamos el secreto mediante las claves compartidas.', async function () {
+        this.timeout(100000)
 
-        const SharedKeys: _pkg.SharedKey[] = await genSharedKeys(11n, 3, 5, nbits)
-        chai.expect(BigInt(11)).to.equal(LagrangeInterpolation(SharedKeys))
+        const SharedKeys: _pkg.SharedKey[] = await genSharedKeys(42n, 3, 5, nbits)
+
+        chai.expect(BigInt(42)).to.equal(LagrangeInterpolation(SharedKeys))
       })
     })
   }
 })
-
-// 211564354165
-// 12123
-// 312315641354896132416894123
